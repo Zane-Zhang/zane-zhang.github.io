@@ -9,7 +9,7 @@
     
     <title>
         
-            Archive: 2023/4 |
+            在Linux中使用wget的一点小提示 |
         
         Zane的小屋
     </title>
@@ -75,7 +75,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 ARCHIVES
@@ -125,7 +125,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">ARCHIVES</a>
                 </li>
             
@@ -155,45 +155,179 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[3]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">在Linux中使用wget的一点小提示</span>
             </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/27/wget-in-linux/"
-                        >在Linux中使用wget的一点小提示</a>
-                        <span class="article-date">04-27</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/26/VSCode-connect-ssh-without-password/"
-                        >VSCode: connect ssh without password</a>
-                        <span class="article-date">04-26</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/19/hello/"
-                        >hello</a>
-                        <span class="article-date">04-19</span>
-                    </li>
-                
-            </ul>
-        </section>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Zane</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-04-27 12:10:15</span>
+        <span class="mobile">2023-04-27 12:10</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-04-27 12:30:12</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>246 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>由于服务器的内网穿透带宽有限，因而尽量不要用sftp等方式传输较大文件，而是使用wget等方法通过网络下载</p>
+<p>首先将需要传输的文件上传到云端（例如云盘），获取下载链接&lt;link&gt;</p>
+<p>在远程终端中输入命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O &quot;&lt;savefile&gt;&quot; &quot;&lt;link&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>注意：由于https协议的安全机制，直接下载会失败，使用<code>-no-check-certificate</code>跳过证书检查。通过<code>-O &quot;&lt;savefile&gt;&quot;</code>可以指定存储文件名称，用<code>&quot;&quot;</code>包围链接以避免地址中特殊符号可能带来的影响</p>
+<p>另外，wget默认将log重定向到wget-log文件当中，若下载出错在这里查看出现问题</p>
+<table>
+<thead>
+<tr>
+<th>常用选项</th>
+<th>缩写</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–output-document &lt;filename&gt;</td>
+<td>-O</td>
+<td>指定文件名</td>
+</tr>
+<tr>
+<td>–continue</td>
+<td>-c</td>
+<td>断点续传</td>
+</tr>
+<tr>
+<td>–background</td>
+<td>-b</td>
+<td>后台下载</td>
+</tr>
+<tr>
+<td>–help</td>
+<td>-h</td>
+<td>查看帮助</td>
+</tr>
+</tbody></table>
+<p>更多用法使用<code>-h</code>以查看</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">在Linux中使用wget的一点小提示</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">Zane</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-04-27 12:10:15</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">2023/04/27/wget-in-linux/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
     </div>
 </div>
+
+                </div>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/04/26/VSCode-connect-ssh-without-password/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">VSCode: connect ssh without password</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
 
                 
             </div>
@@ -238,6 +372,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -335,6 +486,14 @@
 
 
 <div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
     
 </div>
 
