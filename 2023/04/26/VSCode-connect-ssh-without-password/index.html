@@ -187,7 +187,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-26 23:56:06</span>
+        <span class="pc">2023-04-27 12:00:22</span>
     </span>
     
     
@@ -196,7 +196,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>148 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>150 Words</span>
         </span>
     
     
@@ -227,7 +227,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i &lt;name&gt;.pub &lt;username&gt;@&lt;ip&gt; -p &lt;port&gt;</span><br></pre></td></tr></table></figure>
 
 <p>修改配置文件，打开同目录下config文件（VS Code中使用的配置文件），增加IdentigyFile项</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host &lt;xxx&gt;</span><br><span class="line">  HostName &lt;ip&gt;</span><br><span class="line">  User &lt;username&gt;</span><br><span class="line">  Port &lt;port&gt;</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host &lt;xxx&gt;</span><br><span class="line">  HostName &lt;ip&gt;</span><br><span class="line">  User &lt;username&gt;</span><br><span class="line">  Port &lt;port&gt;</span><br><span class="line">  IdentityFile ~/.ssh/&lt;name&gt;</span><br></pre></td></tr></table></figure>
 
 <p>重启VS Code，再次连接，无需再输密码</p>
 
