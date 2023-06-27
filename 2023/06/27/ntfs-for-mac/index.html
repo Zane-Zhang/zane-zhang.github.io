@@ -187,7 +187,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-06-27 10:50:09</span>
+        <span class="pc">2023-06-27 11:03:41</span>
     </span>
     
     
@@ -196,7 +196,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>63 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>76 Words</span>
         </span>
     
     
@@ -226,10 +226,17 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo umount /dev/&lt;diskname&gt;</span><br></pre></td></tr></table></figure>
 
 <p>建立挂载点</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /Volumes</span><br><span class="line">mkdir Newfolder/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /Volumes/Newfolder</span><br></pre></td></tr></table></figure>
 
 <p>重新挂载磁盘</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount_ntfs -o rw,nobrowse /dev/&lt;diskname&gt; Newfolder/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount_ntfs -o rw,nobrowse /dev/&lt;diskname&gt; /Volumes/Newfolder</span><br></pre></td></tr></table></figure>
+
+<p>建立软连接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /Volumes/Newfolder ~/Desktop/Newfolder</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 <p>若磁盘没有正确退出，在Windows中修复</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkdsk F: /f</span><br></pre></td></tr></table></figure>
